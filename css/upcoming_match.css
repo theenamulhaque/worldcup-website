@@ -44,7 +44,7 @@ Main Part Code Start
     height: 90vh;
     background-color: #000;
     border-radius: 30px;
-    background-image: url(../image/heroimg.jpg);
+    background-image: url(../image/upcomming.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -90,9 +90,10 @@ Main Part Code Start
 
 .banner-leftpart-textbox h1 {
     color: #fff;
-    font-size: 70px;
-    line-height: 60px;
+    font-size: 60px;
+    line-height: 65px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .banner-leftpart-textbox p {
@@ -100,25 +101,29 @@ Main Part Code Start
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 60px;
+    font-weight: 300;
 }
+
+/* btn */
 
 .banner-leftpart .banner-btn a {
     padding: 14px 40px;
     background: transparent;
-    border-radius: 50px;
-    color: #DD0000;
+    border-radius: 10px;
+    color: #fff;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     position: relative;
     z-index: 1;
     border: 1px solid #fff;
+    letter-spacing: 2px;
 }
 
 .banner-btn a::before {
     content: '';
-    width: 25%;
+    width: 10%;
     height: 100%;
-    border-radius: 50px;
+    border-radius: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -143,57 +148,6 @@ Main Part Code Start
     margin-left: 20px;
 }
 
-/* banner-right part */
-
-/* .banner-rightpart {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    padding: 0 0 0 5%;
-} */
-
-/* .banner-rightpart img {
-    width: 30px;
-} */
-
-/* .player-logo {
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    /* transform: translate(-50%, -50%); 
-}*/
-
-/* .player-logo img:nth-child(1) {
-    top: 60%;
-    left: 405%;
-    width: 30%;
-}
-
-.player-logo img:nth-child(2) {
-    top: 86%;
-    left: 53%;
-    width: 30%;
-}
-
-.player-logo img:nth-child(3) {
-    top: 70%;
-    left: 61%;
-    width: 30%;
-}  */
-
-/* animation */
-/* .player-logo {
-    animation: rotate 60s linear infinite;
-    }
-    
-    @keyframes rotate {
-        100% {
-            transform: rotate(360deg);
-        }
-    } */
-
-
-
 /* Banner Code End*************/
 
 /*-------------------------------
@@ -208,7 +162,8 @@ BANNER RESPONSIVE CODE START
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 150vh;  
+        height: 150vh; 
+        border-radius: 20px; 
     }
 
     .banner-leftpart {
@@ -217,7 +172,7 @@ BANNER RESPONSIVE CODE START
     }
   
     .banner-leftpart-textbox h1 {
-        font-size: 62px;
+        font-size: 40px;
         line-height: 53px;
         text-align: center;
         margin-bottom: 40px;
@@ -241,15 +196,25 @@ BANNER RESPONSIVE CODE START
   /*  */
 
   @media (min-width: 481px) and (max-width: 767px) {
+
+    .banner-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
   
     .banner-leftpart-textbox h1 {
         font-size: 40px;
         line-height: 43px;
         margin-bottom: 20px;
+        text-align: center;
     }
     
     .banner-leftpart-textbox p {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 24px;
         margin-bottom: 50px;
 
@@ -259,6 +224,10 @@ BANNER RESPONSIVE CODE START
         -webkit-line-clamp:2;
         -webkit-box-orient: vertical;
     }
+
+    .banner-btn {
+        text-align: center;
+    }
     
   }
 
@@ -266,7 +235,11 @@ BANNER RESPONSIVE CODE START
 
   @media (min-width: 768px) and (max-width: 1024px) {
   
-    /* CSS */
+    .banner-leftpart-textbox h1 {
+        font-size: 50px;
+        line-height: 53px;
+        margin-bottom: 20px;
+    }
     
   }
 
@@ -315,8 +288,6 @@ BANNER RESPONSIVE CODE END
     background-color: #fff;
     margin: 22px;
     border-radius: 5px;
-    color: #000;
-    font-size: 16px;
     position: relative;
     z-index: 1;
     letter-spacing: 2px;
@@ -364,7 +335,7 @@ BANNER RESPONSIVE CODE END
     color: #000;
 }
 
-.blog-section-inner-leftpart-btn .blog-blog-btn{
+.blog-section-inner-leftpart-btn .blog-upcoming-btn{
     background-color: #DD0000;
     color: #fff;
 }
@@ -396,6 +367,11 @@ BANNER RESPONSIVE CODE END
 }
 
 .blog-inner-card:hover {
+    background-color: #f3f3f3;
+    background-image: url(../image/gridbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     box-shadow:  8px 8px 16px #d9d9d9,
              -8px -8px 16px #e7e7e7;
              transition: 0.5s ease-in-out;
@@ -404,58 +380,21 @@ BANNER RESPONSIVE CODE END
 .blog-textbox {
     padding: 10px 10px;
     width: 90%;
-    text-align: left;
+    text-align: center;
 }
 
-/* btn */
-
-
-.blog-textbox a {
-    padding: 2px 8px;
-    background: transparent;
-    color: #000;
-    font-size: 15px;
+.blog-textbox h4{
+    margin-bottom:10px;
     font-weight: 600;
-    position: relative;
-    z-index: 1;
-    border: 1px solid #000;
-    border-radius: 4px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.blog-textbox p {
+    font-size: 14px;
+    color: rgb(95, 95, 95);
     letter-spacing: 2px;
-    margin-bottom: 50px;
-}
-
-.blog-textbox a::before {
-    content: '';
-    width: 0;
-    height: 100%;
-    border-radius: 4px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: -1;
-    transition: 0.5s ease-in-out;
-}
-
-.blog-textbox a:hover {
-    color: #fff;
-    transition: 0.5s ease-in-out;
-    border: none;
-}
-
-.blog-textbox a:hover::before {
-    width: 100%;
-    transition: 0.5s ease-in-out;
-    color: #fff;
-    background-color: #DD0000;
-}
-
-
-/* btn */
-
-.blog-textbox p{
-    margin-top: 10px;
-    font-weight: 600;
+    margin-bottom:30px;
 }
 
 .time-date {
@@ -578,6 +517,10 @@ BLOG RESPONSIVE CODE START
     border-radius: 10px;
     letter-spacing: 2px;
 }
+
+.blog-section-inner-leftpart-btn .blog-upcoming-btn {
+    color: #000;
+}
     
   }
 
@@ -642,6 +585,10 @@ BLOG RESPONSIVE CODE START
         font-weight: 600;
         border-radius: 10px;
         letter-spacing: 2px;
+    }
+
+    .blog-section-inner-leftpart-btn .blog-upcoming-btn {
+        color: #000;
     }
     
   }
