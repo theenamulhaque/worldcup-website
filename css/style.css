@@ -1,0 +1,810 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    height: -webkit-fill-available;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    height: -webkit-fill-available;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* GLOBAL CSS END */
+
+/********************************
+Main Part Code Start
+********************************/
+
+.mainpart {
+    width: 100%;
+    /* height: 230vh; */
+}
+
+.mainpart-container {
+    padding: 3% 5%;
+}
+
+/* ---------- */
+
+/* Banner Code Start **************/
+
+
+/* banner-leftpart */
+.banner-section {
+    width: 100%;
+    height: 90vh;
+    background-color: #000;
+    border-radius: 30px;
+    background-image: url(../image/heroimg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.banner-leftpart {
+    width: 50%;
+    padding: 0 0 0 5%;
+}
+
+.banner-cloud {
+    position: absolute;
+    background-image: url(../image/cloud1.png);
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 0.3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation: animate 100s linear infinite;
+	/* z-index: ; */
+}
+/* animation */
+
+@keyframes animate {
+	0% {
+		background-position: 0px;
+	}
+
+	100% {
+		background-position: 5440px;
+	}
+
+}
+
+/* animation */
+
+.banner-leftpart-textbox h1 {
+    color: #fff;
+    font-size: 70px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+.banner-leftpart-textbox p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.banner-leftpart .banner-btn a {
+    padding: 14px 40px;
+    background: transparent;
+    border-radius: 50px;
+    color: #DD0000;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #fff;
+}
+
+.banner-btn a::before {
+    content: '';
+    width: 25%;
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.banner-btn a:hover {
+    color: #000;
+    transition: 0.5s ease-in-out;
+}
+
+.banner-btn a:hover::before {
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    color: #000;
+    background-color: #fff;
+}
+
+.fa-arrow-right-long {
+    margin-left: 20px;
+}
+
+/* banner-right part */
+
+/* .banner-rightpart {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 0 0 0 5%;
+} */
+
+/* .banner-rightpart img {
+    width: 30px;
+} */
+
+/* .player-logo {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); 
+}*/
+
+/* .player-logo img:nth-child(1) {
+    top: 60%;
+    left: 405%;
+    width: 30%;
+}
+
+.player-logo img:nth-child(2) {
+    top: 86%;
+    left: 53%;
+    width: 30%;
+}
+
+.player-logo img:nth-child(3) {
+    top: 70%;
+    left: 61%;
+    width: 30%;
+}  */
+
+/* animation */
+/* .player-logo {
+    animation: rotate 60s linear infinite;
+    }
+    
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    } */
+
+
+
+/* Banner Code End*************/
+
+/*-------------------------------
+BANNER RESPONSIVE CODE START
+---------------------------------*/
+
+@media (max-width: 480px) {
+    
+
+    .banner-section {
+        background-image: url(../image/mobile-naym.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 150vh;  
+    }
+
+    .banner-leftpart {
+        width: 100%;
+        padding: 0 2% 0 2%;
+    }
+  
+    .banner-leftpart-textbox h1 {
+        font-size: 62px;
+        line-height: 53px;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: -300px;
+    }
+    
+    .banner-leftpart-textbox p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .banner-btn {
+        text-align: center;
+    }
+    
+    
+  }
+
+  /*  */
+
+  @media (min-width: 481px) and (max-width: 767px) {
+  
+    .banner-leftpart-textbox h1 {
+        font-size: 40px;
+        line-height: 43px;
+        margin-bottom: 20px;
+    }
+    
+    .banner-leftpart-textbox p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 50px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp:2;
+        -webkit-box-orient: vertical;
+    }
+    
+  }
+
+  /*  */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+    /* CSS */
+    
+  }
+
+/*-------------------------------
+BANNER RESPONSIVE CODE END
+---------------------------------*/
+
+/* Blog Section Code Start */
+
+.blog-section {
+    width: 100%;
+    height: 110vh;
+    padding-top: 80px ;
+}
+
+.blog-section-inner {
+    display: grid;
+    grid-template-columns: 300px auto;
+    column-gap: 20px;
+}
+
+/* left */
+
+.blog-section-inner-leftpart {
+    height: 250px;
+    background-color: #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+.blog-section-inner-leftpart:hover {
+    box-shadow:  -8px -8px 27px #d7d7d7,
+             8px 8px 27px #e9e9e9;
+             transition: 0.5s ease-in-out;
+}
+
+/* btn */
+
+.blog-section-inner-leftpart-btn a {
+    display: block;
+    padding: 10px 30px;
+    background-color: #fff;
+    margin: 22px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+.blog-section-inner-leftpart-btn a::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #DD0000;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.blog-section-inner-leftpart-btn a:hover {
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.blog-section-inner-leftpart-btn a:hover::before {
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    color: #fff;
+    background-color: #DD0000;
+}
+
+/* btn */
+
+.blog-section-inner-leftpart-btn .btn {
+    display: block;
+    padding: 10px 30px;
+    background-color: #fff;
+    margin: 22px;
+    border-radius: 5px;
+}
+
+.blog-section-inner-leftpart-btn a {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.blog-section-inner-leftpart-btn .blog-blog-btn{
+    background-color: #DD0000;
+    color: #fff;
+}
+
+/* right */
+
+.blog-right-cardbox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 30px;
+}
+
+.blog-inner-card img{
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 10px 10px 0 0px;
+}
+
+.blog-inner-card {
+    border: 1px solid rgba(141, 141, 141, 0.288);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.blog-inner-card:hover {
+    box-shadow:  8px 8px 16px #d9d9d9,
+             -8px -8px 16px #e7e7e7;
+             transition: 0.5s ease-in-out;
+}
+
+.blog-textbox {
+    padding: 10px 10px;
+    width: 90%;
+    text-align: left;
+}
+
+/* btn */
+
+
+.blog-textbox a {
+    padding: 2px 8px;
+    background: transparent;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #000;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+.blog-textbox a::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.blog-textbox a:hover {
+    color: #fff;
+    transition: 0.5s ease-in-out;
+    border: none;
+}
+
+.blog-textbox a:hover::before {
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    color: #fff;
+    background-color: #DD0000;
+}
+
+
+/* btn */
+
+.blog-textbox p{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.time-date {
+    width: 90%;
+    padding: 0px 0 15px 0;
+}
+
+span {
+    color: #555555;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.fa-clock-o {
+    color: #858585;
+}
+
+.fa-commenting-o {
+    margin-left: 30px;
+    color: #858585;
+}
+
+.blog-right-cartbox-viewall-btn {
+    display: none;
+}
+
+/* Blog Section Code End */
+
+/*-------------------------------
+BLOG RESPONSIVE CODE START
+---------------------------------*/
+
+@media (max-width: 480px) {
+  
+
+    /* left code */
+    .blog-section-inner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 20px;
+        margin-top: -40px;
+    }
+
+    .blog-section {
+        margin-bottom: 50px;
+        height: 500%;
+    }
+
+    /* right code */
+
+    .blog-right-cardbox {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 15px;
+        row-gap: 30px;
+        margin-top: 20px;
+    }
+    
+  }
+
+  /*  */
+
+  @media (min-width: 481px) and (max-width: 767px) {
+  
+   /* left code */
+
+   .blog-section {
+    margin-bottom: 40px;
+    height: 500%;
+}
+
+
+   .blog-section-inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 20px;
+    margin-top: -40px;
+}
+
+.blog-section-inner-leftpart {
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #d7d7d7;
+}
+
+.blog-section-inner-leftpart-btn .btn {
+    display: inline-block;
+    background-color: #fff;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+
+.blog-section-inner-leftpart .blog-upcoming-btn {
+    padding: 10px 20px;
+}
+
+.blog-section-inner-leftpart .blog-allgroup-btn {
+    padding: 10px 40px;
+}
+
+.blog-section-inner-leftpart .blog-blog-btn {
+    background-color: #DD0000 !important;
+    padding: 10px 55px;
+}
+
+.blog-right-cartbox-viewall-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 60px 0 20px 0;
+}
+
+.blog-right-cartbox-viewall-btn a {
+    padding: 12px 50px;
+    background-color: #DD0000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
+    
+  }
+
+  /*  */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+     /* left code */
+
+     .blog-section {
+        margin-bottom: 40px;
+        height: 500%;
+    }
+
+     .blog-section-inner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 20px;
+        margin-top: -40px;
+    }
+    
+    .blog-section-inner-leftpart {
+        height: 100px;
+        margin-bottom: 20px;
+        background-color: #d7d7d7;
+    }
+    
+    .blog-section-inner-leftpart-btn .btn {
+        display: inline-block;
+        background-color: #fff;
+        margin: 2px;
+        border-radius: 5px;
+        font-size: 16px;
+        letter-spacing: 0px;
+    }
+    
+    .blog-section-inner-leftpart .blog-upcoming-btn {
+        padding: 10px 20px;
+    }
+    
+    .blog-section-inner-leftpart .blog-allgroup-btn {
+        padding: 10px 40px;
+    }
+    
+    .blog-section-inner-leftpart .blog-blog-btn {
+        background-color: #DD0000 !important;
+        padding: 10px 55px;
+    }
+    
+    .blog-right-cartbox-viewall-btn {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 60px 0 20px 0;
+    }
+    
+    .blog-right-cartbox-viewall-btn a {
+        padding: 12px 50px;
+        background-color: #DD0000;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 10px;
+        letter-spacing: 2px;
+    }
+    
+  }
+
+
+/*-------------------------------
+BLOG RESPONSIVE CODE END
+---------------------------------*/
+
+/********************************
+Main Part Code End
+******************************* */
+/********************************
+Footer Part Code Start
+******************************* */
+
+
+.footer {
+    width: 100%;
+    background-color: #161616;
+}
+
+.footer-container {
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container h1 {
+    color: #fff;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-top: 80px;    
+}
+
+.footer-innerline {
+    width: 70%;
+    height: 1px;
+    background-color: #555555;
+    margin: 30px 0;
+}
+
+.footer-quicklink {
+    margin-bottom: 80px;
+}
+
+.footer-quicklink ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.footer-quicklink ul li a{
+    color: rgb(209, 209, 209);
+    transition: 0.4s ease-in-out;
+}
+
+.footer-quicklink ul li a:hover{
+    color: #DD0000;
+    transition: 0.4s ease-in-out;
+}
+
+.social-link {
+   display: none;
+}
+
+
+
+/*-------------------------------
+FOOTER RESPONSIVE CODE START
+---------------------------------*/
+
+@media (max-width: 480px) {
+
+    .footer {
+        height: 100vh;
+    }
+
+    .footer-quicklink {
+        text-align: center;
+    }
+
+    .footer-quicklink ul li{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .social-link {
+        display: block;
+        margin-top: -20px;
+     }
+
+     .social-link ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 10px 10px
+     }
+
+     .social-link ul li a i{
+        font-size: 20px;
+        color: #fff;
+     }
+    
+  }
+
+  /*  */
+
+  @media (min-width: 481px) and (max-width: 767px) {
+  
+    .footer-quicklink {
+        text-align: center;
+    }
+
+    .social-link {
+        display: block;
+        margin-top: 70px;
+     }
+
+     .social-link ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 10px 10px
+     }
+
+     .social-link ul li a i{
+        font-size: 25px;
+        color: #fff;
+     }
+    
+  }
+
+  /*  */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+    .footer-quicklink {
+        text-align: center;
+    }
+
+    .social-link {
+        display: block;
+        margin-top: 70px;
+     }
+
+     .social-link ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 10px 10px
+     }
+
+     .social-link ul li a i{
+        font-size: 25px;
+        color: #fff;
+     }
+    
+  }
+
+/*-------------------------------
+FOOTER RESPONSIVE CODE END
+---------------------------------*/
+
+/********************************
+Footer Part Code End
+******************************* */
